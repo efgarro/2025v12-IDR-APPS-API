@@ -1,0 +1,32 @@
+{
+  "name": "2025v12-idr-apps-api",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "src/serverApp.js",
+  "scripts": {
+    "dev": "nodemon serverApp.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.600.0",
+    "@aws-sdk/client-secrets-manager": "^3.946.0",
+    "busboy": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "exifreader": "^4.23.3",
+    "express": "^4.18.3",
+    "express-promise-router": "^4.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "multer-s3": "^3.0.1",
+    "pg": "^8.11.3",
+    "uuid": "^11.1.0",
+    "uuidv7": "^0.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
