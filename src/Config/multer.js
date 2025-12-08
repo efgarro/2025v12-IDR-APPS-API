@@ -1,20 +1,13 @@
-import { join } from "node:path";
-import dotenv from "dotenv";
-import multerS3 from "multer-s3";
-
 import { S3Client } from "@aws-sdk/client-s3";
-
 import { uuidv7 } from "uuidv7";
-dotenv.config({
-  path: join(import.meta.dirname, "../../.env"),
-});
+import { secrets } from "../Utils/aws-secrets";
 
 const s3 = new S3Client({
   region: "auto",
   endpoint: `https://0cffae522cdd52172bbe596db41d0f8a.r2.cloudflarestorage.com`,
   credentials: {
-    accessKeyId: process.env.ACCESS_KEY_ID,
-    secretAccessKey: process.env.SECRET_ACCESS_KEY,
+    accessKeyId: secrets.ACCESS_KEY_ID,
+    secretAccessKey: secrets.SECRET_ACCESS_KEY,
   },
 });
 

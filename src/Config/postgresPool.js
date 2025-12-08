@@ -2,10 +2,10 @@ import {secrets} from "../Utils/aws-secrets"
 
 // Your code goes here
 console.log("secret");
-console.log(secret);
+console.log(secrets);
 console.log("User/Password");
-console.log(secret.user);
-console.log(secret.password);
+console.log(secrets.user);
+console.log(secrets.password);
 
 import pg from "pg";
 const { Pool } = pg;
