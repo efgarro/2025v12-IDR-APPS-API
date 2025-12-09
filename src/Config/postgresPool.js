@@ -1,4 +1,4 @@
-import {secrets} from "../Utils/aws-secrets"
+import {secrets} from "../Utils/aws-secrets.js"
 
 // Your code goes here
 console.log("secret");

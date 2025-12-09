@@ -1,6 +1,6 @@
 import { S3Client } from "@aws-sdk/client-s3";
 import { uuidv7 } from "uuidv7";
-import { secrets } from "../Utils/aws-secrets";
+import { secrets } from "../Utils/aws-secrets.js";
 
 const s3 = new S3Client({
   region: "auto",
