@@ -58,6 +58,20 @@ export const getImageSetStack = async (req, res) => {
   res.status(200).json(response.rows[0].get_image_cluster_stack);
 };
 
+export const getImageMix = async (req, res) => {
+  console.log(req.body.image_mix_name);
+  let response;
+  try {
+    response = await blnQuery(`SELECT get_image_mix($1)`, [
+      req.body.image_mix_name,
+    ]);
+  } catch (err) {
+    console.log(err);
+  }
+  console.log(response.rows[0].get_image_mix);
+  res.status(200).json(response.rows[0].get_image_mix);
+};
+
 export const getCheapQuery = async (req, res) => {
   let response;
   try {
