@@ -39,7 +39,7 @@ blnApiRouter.param("image_mix_name", (req, res, next, image_mix_name) => {
 
 blnApiRouter.get("/cluster/cluster_stack/:image_cluster_id", getImageSetStack);
 
-blnApiRouter.get("/cluster/cluster_stack/:image_mix_name", getImageMix);
+blnApiRouter.get("/cluster/cluster_mix/:image_mix_name", getImageMix);
 
 blnApiRouter.get("/cheap-query", getCheapQuery);
 
