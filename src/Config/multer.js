@@ -1,3 +1,10 @@
+// import { join } from "node:path";
+// import dotenv from "dotenv";
+// dotenv.config({
+//   path: join(import.meta.dirname, "../../.env"),
+// });
+
+
 import { S3Client } from "@aws-sdk/client-s3";
 import multerS3 from "multer-s3";
 import { uuidv7 } from "uuidv7";
@@ -11,6 +18,15 @@ const s3 = new S3Client({
     secretAccessKey: secrets.R2_SECRET_ACCESS_KEY,
   },
 });
+
+// const s3 = new S3Client({
+//   region: "auto",
+//   endpoint: `https://0cffae522cdd52172bbe596db41d0f8a.r2.cloudflarestorage.com`,
+//   credentials: {
+//     accessKeyId: process.env.R2_ACCESS_KEY_ID,
+//     secretAccessKey: process.env.R2_SECRET_ACCESS_KEY,
+//   },
+// });
 
 export const storageR2 = (bucket) => {
   return multerS3({

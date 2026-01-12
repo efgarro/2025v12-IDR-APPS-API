@@ -1,11 +1,17 @@
-import {secrets} from "../Utils/aws-secrets.js"
+// import { join } from "node:path";
+// import dotenv from "dotenv";
+// dotenv.config({
+//   path: join(import.meta.dirname, "../../.env"),
+// });
 
-// Your code goes here
-console.log("secret");
-console.log(secrets);
-console.log("User/Password");
-console.log(secrets.user);
-console.log(secrets.password);
+import { secrets } from "../Utils/aws-secrets.js";
+
+// // Your code goes here
+// console.log("secret");
+// console.log(secrets);
+// console.log("User/Password");
+// console.log(secrets.user);
+// console.log(secrets.password);
 
 import pg from "pg";
 const { Pool } = pg;
@@ -41,7 +47,5 @@ const blnPool = new Pool({
 //   user: process.env.PG_USER,
 //   password: process.env.PG_PWD,
 // });
-
-// bln
 
 export const blnQuery = (text, params) => blnPool.query(text, params);
