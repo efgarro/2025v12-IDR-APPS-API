@@ -47,6 +47,6 @@ blnApiRouter.get("/", (req, res) => {
   return res.status(200).send({ message: "/bln" });
 });
 
-// blnApiRouter.get("/test", (req, res) => {
-//   return res.status(200).send({ message: "/test" });
-// });
+blnApiRouter.get("/test", (req, res) => {
+  return res.status(200).send({ message: "/test" });
+});
