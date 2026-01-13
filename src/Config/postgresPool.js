@@ -1,5 +1,11 @@
 import { secrets } from "../Utils/aws-secrets.js";
 
+// console.log("secret");
+// console.log(secrets);
+// console.log("User/Password");
+// console.log(secrets.user);
+// console.log(secrets.password);
+
 import pg from "pg";
 const { Pool } = pg;
 
